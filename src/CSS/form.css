@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+.aaaa{
+    display: none;
+}
+
+input[type=text],input[type=email],input[type=url], select, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    width: 180px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, textarea:focus {
+    width: 100%;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+p{
+    width: 70%;
+}
+
+input[type=submit], input[type=reset] {
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-left: 3px;
+}
+
+input[type=submit]{
+    background-color: #4CAF50;
+}
+
+input[type=reset]{
+    background-color: #d95959;
+}
+
+input[type=reset]:hover{
+    background-color: #c75050;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.form_title {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.col25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+hr{
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    color: white;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:valid{
+    border: 1px solid green;
+}
+
+@media screen and (max-width: 600px) {
+    .col25, .col75, input[type=submit], input[type=reset] {
+        width: 100%;
+        margin-top: 0;
+    }
+    input[type=submit], input[type=reset]{
+        margin-top: 3px;
+    }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rubik's</title>
+    <link rel="stylesheet" href="CSS/articles.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>Rubikova kocka</h1>
+    </header>
+
+    <nav>
+      <div class="submenu">
+        <h2><a href="../index.html">Ãvod</a></h2>
+      </div>
+      <div class="submenu">
+        <h2><a href="article1.html">Speedcubing</a></h2>
+      </div>
+      <div class="submenu">
+        <h2><a href="article2.html">ErnÅ Rubik</a></h2>
+      </div>
+      <div class="submenu">
+        <h2><a href="form.html">FormulÃ¡r</a></h2>
+      </div>
+    </nav>
+
+    <main>
+      <div class="title">
+        <h1>Vyjadri svoj nÃ¡zor.</h1>
+      </div>
+      <div class="div_article">
+        <h6 class="aaaa">a</h6>
+        <form id="nazor">
+          <div class="row">
+            <div class="col25">
+              <label for="meno">Meno:</label>
+            </div>
+            <div class="col75">
+              <input
+                type="text"
+                id="meno"
+                autocomplete="off"
+                name="meno"
+                maxlength="30"
+                title="Iba pÃ­smenÃ¡, prvÃ© pÃ­smeno veÄ¾kÃ½m, min 2, max 30 znakov"
+                pattern="^[A-Z][a-z]{1,29}$"
+                class="form_text"
+                placeholder="meno.."
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col25">
+              <label for="priezvisko">Priezvisko:</label>
+            </div>
+            <div class="col75">
+              <input
+                type="text"
+                id="priezvisko"
+                autocomplete="off"
+                name="priezvisko"
+                maxlength="30"
+                title="Iba pÃ­smenÃ¡, prvÃ© pÃ­smeno veÄ¾kÃ½m, min 2, max 30 znakov"
+                pattern="^[A-Z][a-z]{1,29}$"
+                class="form_text"
+                placeholder="priezvisko.."
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col25">
+              <label for="email" class="form_label">Email:</label>
+            </div>
+            <div class="col75">
+              <input
+                type="email"
+                id="email"
+                autocomplete="on"
+                name="email"
+                class="form_text"
+                placeholder="email.."
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col25 form_title">Pohlavie:</div>
+            <div class="col75">
+              <input
+                type="radio"
+                id="muz"
+                name="pohlavie"
+                value="muz"
+                class="form_radio"
+                required
+              />
+              <label for="muz">MuÅ¾</label>
+            </div>
+          </div>
+          <div class="col25"></div>
+          <div class="col75">
+            <input
+              type="radio"
+              id="zena"
+              name="pohlavie"
+              value="zena"
+              class="form_radio"
+              required
+            />
+            <label for="zena">Å½ena</label>
+          </div>
+
+          <div class="row">
+            <div class="col25 form_title">ObÄ¾ÃºbenÃ½ hlavolam:</div>
+            <div class="col75">
+              <input
+                type="checkbox"
+                id="kocka_3x3"
+                name="kocka_3x3"
+                value="kocka_3x3"
+              />
+              <label for="kocka_3x3">Kocka 3x3</label>
+            </div>
+            <div class="col25"></div>
+            <div class="col75">
+              <input
+                type="checkbox"
+                id="kocka_4x4"
+                name="kocka_4x4"
+                value="kocka_4x4"
+              />
+              <label for="kocka_4x4">Kocka 4x4</label>
+            </div>
+            <div class="col25"></div>
+            <div class="col75">
+              <input type="checkbox" id="ine" name="ine" value="ine" />
+              <label for="ine">InÃ©...</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col25">
+              <label for="text_area">NapÃ­Å¡te nÃ¡m nieÄo:</label>
+            </div>
+            <div class="col75">
+              <textarea
+                id="text_area"
+                autocomplete="off"
+                rows="4"
+                cols="50"
+                name="comment"
+                placeholder="poznÃ¡mka.."
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col25">
+              <label for="obrazok">ObrÃ¡zok:</label>
+            </div>
+            <div class="col75">
+              <input type="url" id="obrazok" name="obrazok" />
+            </div>
+          </div>
+          <br />
+
+          <div class="row">
+            <input type="reset" value="Reset" />
+            <input type="submit" value="OdoslaÅ¥" />
+          </div>
+        </form>
+      </div>
+      <div class="div_article">
+        <h6 class="aaaa">a</h6>
+        <p>VaÅ¡e odpovede:</p>
+        <hr />
+        <div id="answers_div"></div>
+      </div>
+    </main>
+
+    <footer>
+      Autor: <a href="mailto:listiakr1999@gmail.com">Radovan LiÅ¡tiak</a>
+    </footer>
+
+    <script id="form_answer" type="text/template">
+      <section>
+          <h3>{{Meno}} {{Priezvisko}}</h3>
+          <p>Email: {{Email}}</p>
+          <p>Pohlavie: {{Pohlavie}}</p>
+          <p>ObÄ¾ÃºbenÃ½ hlavolam: {{Oblubeny_hlavolam}}</p>
+          <p>SprÃ¡va: {{SprÃ¡va}}</p>
+          <hr>
+      </section>
+    </script>
+
+    <script src="JS/form_nazor.js"></script>
+  </body>
+</html>
